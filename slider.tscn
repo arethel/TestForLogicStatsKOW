@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://stat.gd" type="Script" id=1]
+[ext_resource path="res://Label.gd" type="Script" id=2]
+
+[node name="slider" type="HSlider"]
+margin_left = 167.0
+margin_top = 126.0
+margin_right = 433.0
+margin_bottom = 169.0
+
+[node name="name" type="Label" parent="."]
+margin_left = -51.0
+margin_top = 13.0
+margin_right = -11.0
+margin_bottom = 27.0
+text = "1"
+script = ExtResource( 2 )
+
+[node name="stat" type="Label" parent="."]
+margin_left = 276.0
+margin_top = 15.0
+margin_right = 316.0
+margin_bottom = 29.0
+text = "0"
+script = ExtResource( 1 )
+
+[connection signal="value_changed" from="." to="stat" method="_on_slider_value_changed"]
